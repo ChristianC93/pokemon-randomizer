@@ -21,6 +21,18 @@ function resetDiv() {
     pokemonContainer.innerHTML = " ";
 }
 
+function highlightCard(e) {
+    if (e.target.matches(".card")) {
+        e.target.style.backgroundColor = "lightyellow"
+    }
+}
+
+function normalizeCard(e) {
+    if (e.target.matches(".card")) {
+        e.target.style.backgroundColor = ""
+    }
+}
+
 //Helper Functions
 function randomId(min, max) {
     min = Math.ceil(min);
@@ -61,8 +73,10 @@ function renderPokemonCard(pokemon) {
         <p>#${pokemon.id.toString().padStart(3, "0")}</p>
     </div>
     <footer>${pokemonTypes(pokemon.types)}</footer>
-    </article>` 
+    </article>`
     pokemonDiv.innerHTML = pokemonCard;
+    pokemonDiv.addEventListener("mouseover", highlightCard)
+    pokemonDiv.addEventListener("mouseout", normalizeCard)
     pokemonContainer.appendChild(pokemonDiv);
 }
 

@@ -29,11 +29,6 @@ function randomId(min, max) {
 }
 
 function renderPokemon(pokemon) {
-    //const pokemonDiv = document.createElement("div");
-    const pokeImg = document.createElement("img");
-    const pokeName = document.createElement("h3");
-    const pokeId = document.createElement("p");
-    const pokeType = document.createElement("ul");
     pokeImg.srcset = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`
     pokeName.innerText = pokemon.name[0].toUpperCase() + pokemon.name.slice(1)
     pokeId.innerText = `#${pokemon.id.toString().padStart(3, "0")}`

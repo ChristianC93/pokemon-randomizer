@@ -63,9 +63,9 @@ function renderPokemonCard(pokemon) {
     <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png" alt="${pokemon.name}">
     </div>
     <div class="content">
-        <p>${pokemonTypes(pokemon.types)}</p>
+        <p>#${pokemon.id.toString().padStart(3, "0")}</p>
     </div>
-    <footer>#${pokemon.id.toString().padStart(3, "0")}</footer>
+    <footer>${pokemonTypes(pokemon.types)}</footer>
     </article>` 
     pokemonDiv.innerHTML = pokemonCard;
     pokemonContainer.appendChild(pokemonDiv);

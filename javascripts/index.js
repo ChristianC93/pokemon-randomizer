@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     pokemonButton.addEventListener('click', getrandomPokemon);
-    resetButton.addEventListener('click', resetDiv);
-
-    
+    resetButton.addEventListener('click', resetDiv);    
 })
 //NODE Getters
 const pokemonContainer = document.querySelector("#pokemon-container");
@@ -38,15 +36,6 @@ function randomId(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min) + min);
-}
-
-function renderPokemon(pokemon) {
-    pokeImg.srcset = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`
-    pokeName.innerText = pokemon.name[0].toUpperCase() + pokemon.name.slice(1)
-    pokeId.innerText = `#${pokemon.id.toString().padStart(3, "0")}`
-    pokeType.innerText = pokemonTypes(pokemon.types)
-    pokemonDiv.append(pokeName, pokeImg, pokeId, pokeType)
-    pokemonContainer.appendChild(pokemonDiv);     
 }
 
 function pokemonTypes(typesArray) {

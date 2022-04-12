@@ -60,3 +60,9 @@ h1 {
 #button-container {
     text-align: center;
 }
+
+#reset {
+    border-radius: 15px;
+    font-size: 20px;
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+}

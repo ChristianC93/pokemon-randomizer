@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     pokemonButton.addEventListener('click', getrandomPokemon);
     resetButton.addEventListener('click', resetDiv);    
 })
+
 //NODE Getters
 const pokemonContainer = document.querySelector("#pokemon-container");
 const pokemonButton = document.querySelector("#get-pokemon");

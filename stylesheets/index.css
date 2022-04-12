@@ -64,7 +64,7 @@ h1 {
 #reset {
     border-radius: 15px;
     font-size: 18px;
-    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+    box-shadow: 0 9px 15px rgba(100, 100, 100, 0.5);
     padding: 16px;
     border-radius: 12px;
     text-align: center;
@@ -72,6 +72,13 @@ h1 {
     color: white;
     margin: 0 20px;
     cursor: pointer;
+    font-family: 'Pokemon Solid', sans-serif;
+}
+
+#reset :active {
+    background-color: red;
+    box-shadow: 0 1px #666;
+    transform: translateY(4px);
 }
 
 #get-pokemon {
@@ -79,4 +86,12 @@ h1 {
     border-radius: 50%;
     padding: 35px 15px;
     cursor: pointer;
+    font-family: 'Pokemon Solid', sans-serif;
+    color: red;
+    box-shadow: 0 9px 15px rgba(100, 100, 100, 0.5);
+}
+
+#get-pokemon :active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }

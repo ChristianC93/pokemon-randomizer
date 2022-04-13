@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     pokemonButton.addEventListener('click', getrandomPokemon);
-    resetButton.addEventListener('click', resetDiv);    
+    resetButton.addEventListener('click', resetDiv); 
 })
 
 //NODE Getters
@@ -61,7 +61,9 @@ function renderPokemonCard(pokemon) {
     </div>
     <div class="content">
         <p>#${pokemon.id.toString().padStart(3, "0")}</p>
-        <i class="material-icons">favorite_border</i>
+        <button id="heart-button">
+        <span id="icon"><i class="material-icons">favorite_border</i></span>
+        </button>
     </div>
     <footer>${pokemonTypes(pokemon.types)}</footer>
     </article>`

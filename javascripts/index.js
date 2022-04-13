@@ -61,6 +61,7 @@ function renderPokemonCard(pokemon) {
     </div>
     <div class="content">
         <p>#${pokemon.id.toString().padStart(3, "0")}</p>
+        <i class="material-icons">favorite_border</i>
     </div>
     <footer>${pokemonTypes(pokemon.types)}</footer>
     </article>`

@@ -15,9 +15,9 @@ Navigate to the directory
 Open index.html (Mac)
 
 ### Acknowledgement
-Thank you to the wonderful people who helped create the PokeAPI
-Materialize.css was a great resource for css stylings
-CDN fonts had an awesome Pokemon Font that I had to include, thank you.
+Thank you to the wonderful people who helped create the PokeAPI.
+Also a huge thanks to Materialize.css for being a great resource for css stylings.
+CDN fonts had an awesome Pokemon Font that I had to include as well.
 
 
 

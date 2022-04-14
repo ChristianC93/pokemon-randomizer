@@ -59,11 +59,11 @@ function renderPokemonCard(pokemon) {
     <div class="image-container">
     <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png" alt="${pokemon.name}">
     </div>
-    <div class="content">
+    
     <div id="buttons>
-    <span id="like"><i class="material-icons">thumb_up</i></span>
-    <span id="dislike"><i class="material-icons">thumb_down</i></span>
+    <span id="heart"><i class="material-icons">favorite</i></span>
     </div>
+    <div class="content">
         <p>#${pokemon.id.toString().padStart(3, "0")}</p>
     </div>
     <footer>${pokemonTypes(pokemon.types)}</footer>
@@ -71,14 +71,19 @@ function renderPokemonCard(pokemon) {
     pokemonDiv.innerHTML = pokemonCard;
     pokemonDiv.addEventListener("mouseover", highlightCard);
     pokemonDiv.addEventListener("mouseout", normalizeCard);
-    //pokemonDiv.addEventListener("click", getHeartButton)
+    pokemonDiv.addEventListener("click", getButtons)
     pokemonContainer.appendChild(pokemonDiv);
 }
 
-//function getHeartButton(e) {
-    //if (e.target.matches(".material-icons")) {
-        //e.target.innerHTML = 
-    //}
-//}
+function getButtons(e) {
+    if (e.target.matches(".material-icons")) {
+       if (e.target.style.color === "red") {
+           e.target.style.color = ""
+       }
+       else {
+           e.target.style.color = "red"
+       }
+    }
+}
 
 

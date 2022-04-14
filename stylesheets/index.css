@@ -96,6 +96,6 @@ h1 {
     transform: translateY(4px);
 }
 
-#dislike {
-    margin-left: 10px;
+.material-icons{
+    cursor: pointer;
 }

@@ -32,6 +32,17 @@ function normalizeCard(e) {
     }
 }
 
+function getHeartButton(e) {
+    if (e.target.matches(".material-icons")) {
+       if (e.target.style.color === "red") {
+           e.target.style.color = "";
+       }
+       else {
+           e.target.style.color = "red";
+       }
+    }
+}
+
 //Helper Functions
 function randomId(min, max) {
     min = Math.ceil(min);
@@ -75,15 +86,5 @@ function renderPokemonCard(pokemon) {
     pokemonContainer.appendChild(pokemonDiv);
 }
 
-function getHeartButton(e) {
-    if (e.target.matches(".material-icons")) {
-       if (e.target.style.color === "red") {
-           e.target.style.color = "";
-       }
-       else {
-           e.target.style.color = "red";
-       }
-    }
-}
 
 

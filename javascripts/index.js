@@ -60,9 +60,11 @@ function renderPokemonCard(pokemon) {
     <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png" alt="${pokemon.name}">
     </div>
     <div class="content">
+    <div id="buttons>
+    <span id="like"><i class="material-icons">thumb_up</i></span>
+    <span id="dislike"><i class="material-icons">thumb_down</i></span>
+    </div>
         <p>#${pokemon.id.toString().padStart(3, "0")}</p>
-        <span id="like"><i class="material-icons">thumb_up</i></span>
-        <span id="dislike"><i class="material-icons">thumb_down</i></span>
     </div>
     <footer>${pokemonTypes(pokemon.types)}</footer>
     </article>`

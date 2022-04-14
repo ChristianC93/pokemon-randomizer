@@ -71,17 +71,17 @@ function renderPokemonCard(pokemon) {
     pokemonDiv.innerHTML = pokemonCard;
     pokemonDiv.addEventListener("mouseover", highlightCard);
     pokemonDiv.addEventListener("mouseout", normalizeCard);
-    pokemonDiv.addEventListener("click", getButtons)
+    pokemonDiv.addEventListener("click", getHeartButton);
     pokemonContainer.appendChild(pokemonDiv);
 }
 
-function getButtons(e) {
+function getHeartButton(e) {
     if (e.target.matches(".material-icons")) {
        if (e.target.style.color === "red") {
-           e.target.style.color = ""
+           e.target.style.color = "";
        }
        else {
-           e.target.style.color = "red"
+           e.target.style.color = "red";
        }
     }
 }

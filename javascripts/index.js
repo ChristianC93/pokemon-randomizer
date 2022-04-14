@@ -61,17 +61,22 @@ function renderPokemonCard(pokemon) {
     </div>
     <div class="content">
         <p>#${pokemon.id.toString().padStart(3, "0")}</p>
-        <button id="heart-button">
-        <span id="icon"><i class="material-icons">favorite_border</i></span>
-        </button>
+        <span id="like"><i class="material-icons">thumb_up</i></span>
+        <span id="dislike"><i class="material-icons">thumb_down</i></span>
     </div>
     <footer>${pokemonTypes(pokemon.types)}</footer>
     </article>`
     pokemonDiv.innerHTML = pokemonCard;
     pokemonDiv.addEventListener("mouseover", highlightCard);
     pokemonDiv.addEventListener("mouseout", normalizeCard);
+    //pokemonDiv.addEventListener("click", getHeartButton)
     pokemonContainer.appendChild(pokemonDiv);
 }
 
+//function getHeartButton(e) {
+    //if (e.target.matches(".material-icons")) {
+        //e.target.innerHTML = 
+    //}
+//}
 
 

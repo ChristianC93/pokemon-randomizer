@@ -99,4 +99,5 @@ h1 {
 #heart-button {
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }

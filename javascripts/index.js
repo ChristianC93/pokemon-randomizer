@@ -20,15 +20,15 @@ function resetDiv() {
     pokemonContainer.innerHTML = " ";
 }
 
-function highlightCard(e) {
-    if (e.target.matches(".card")) {
-        e.target.style.backgroundColor = "lightyellow"; 
+function highlightHeart(e) {
+    if (e.target.matches(".material-icons")) {
+        e.target.style.color = "red"; 
     }
 }
 
-function normalizeCard(e) {
-    if (e.target.matches(".card")) {
-        e.target.style.backgroundColor = "";
+function normalizeHeart(e) {
+    if (e.target.matches(".material-icons")) {
+        e.target.style.color = "";
     }
 }
 
@@ -80,8 +80,8 @@ function renderPokemonCard(pokemon) {
     <footer>${pokemonTypes(pokemon.types)}</footer>
     </article>`
     pokemonDiv.innerHTML = pokemonCard;
-    pokemonDiv.addEventListener("mouseover", highlightCard);
-    pokemonDiv.addEventListener("mouseout", normalizeCard);
+    pokemonDiv.addEventListener("mouseover", highlightHeart);
+    pokemonDiv.addEventListener("mouseout", normalizeHeart);
     pokemonDiv.addEventListener("click", getHeartButton);
     pokemonContainer.appendChild(pokemonDiv);
 }

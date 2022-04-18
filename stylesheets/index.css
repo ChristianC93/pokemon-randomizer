@@ -75,7 +75,7 @@ h1 {
     font-family: 'Pokemon Solid', sans-serif;
 }
 
-#reset :active {
+#reset:active {
     background-color: red;
     box-shadow: 0 1px #666;
     transform: translateY(4px);
@@ -91,14 +91,17 @@ h1 {
     box-shadow: 0 9px 15px rgba(100, 100, 100, 0.5);
 }
 
-#get-pokemon :active {
+#get-pokemon:active {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
 
-.material-icons{
+.material-icons {
     cursor: pointer;
     margin-top: 20px;
     color: white;
 }
 
+.material-icons:hover {
+    color: red;
+}
